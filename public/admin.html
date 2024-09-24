@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>University Schedule Admin Page</h1>
+
+    <!-- Group Management Section -->
+    <section id="group-management">
+        <h2>Groups</h2>
+        <form id="addGroupForm">
+            <input type="text" id="groupName" placeholder="Group Name" required>
+            <input type="number" id="courseYear" placeholder="Course Year" required>
+            <button type="submit">Add Group</button>
+        </form>
+        <h3>Existing Groups</h3>
+        <div id="groupList"></div>
+    </section>
+
+    <!-- Schedule Management Section -->
+    <section id="schedule-management">
+        <h2>Schedules</h2>
+        <form id="addScheduleForm">
+            <select id="groupSelect" required>
+                <option value="" disabled selected>Select Group</option>
+            </select>
+            <input type="text" id="subject" placeholder="Subject" required>
+            <input type="text" id="lecturer" placeholder="Lecturer" required>
+            <input type="text" id="day" placeholder="Day" required>
+            <input type="time" id="startTime" required>
+            <input type="time" id="endTime" required>
+            <input type="text" id="room" placeholder="Room" required>
+            <button type="submit">Add Schedule</button>
+        </form>
+        <h3>Existing Schedules</h3>
+        <div id="scheduleList"></div>
+    </section>
+
+    <script src="admin.js"></script>
+</body>
+</html>
